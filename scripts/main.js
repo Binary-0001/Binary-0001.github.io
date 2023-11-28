@@ -2,7 +2,7 @@
  * 注释
  */
 let myHeading = document.querySelector("h1");
-myHeading.textContent = "澳门皇冠赌场"
+myHeading.textContent = ""
 
 function multiply(num1, num2) {
     let result = num1 * num2

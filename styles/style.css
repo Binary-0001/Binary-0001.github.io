@@ -11,6 +11,10 @@ h1{
     font-size: 60px;
     text-align: center;
 }
+h1, h2, h3 {
+    font-family: 'Long Cang', cursive;
+    color: #2a2a2a;
+}
 p,
 li{
     font-size: 16px;
@@ -29,3 +33,9 @@ body{
     padding: 0 20px 20px 20px;
     border: 5px solid black;
 }
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    flex: 2;
+    display: flex;
+  }
