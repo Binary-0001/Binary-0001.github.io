@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- 兼容模式方案：IE以最高级模式渲染文档；使用Chrome Frame渲染。 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<!-- H5页面窗口自动调整到设备宽度，并禁止用户缩放页面 -->
+	<meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" name="viewport" />
+	<!-- 当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari (ios7.0版本以后，safari上已看不到效果) -->
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式 (可选default、black、black-translucent) -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<!-- 忽略将页面中的数字识别为电话号码 -->
+	<meta name="format-detection" content="telephone=no" />
+	<!-- 作者 -->
+	<meta name="author" content="Cleam Lee" />
+	<!-- 关键词 -->
+	<meta name="keywords" content="关键词" />
+	<!-- 描述信息 -->
+	<meta name="description" content="描述信息" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=8">
+	<meta http-equiv="Expires" content="0">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta http-equiv="Cache" content="no-cache">
+	<title>大字计算器软件隐私保护政策</title>
+	<script>
+		(function (doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt =
+					'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function () {
+					var clientWidth = docEl.clientWidth,
+						MAX_WIDTH = 750;
+					if (!clientWidth) {
+						return;
+					}
+					if (clientWidth >= MAX_WIDTH) {
+						docEl.style.fontSize = '100px';
+					} else {
+						docEl.style.fontSize = 100 * (clientWidth / MAX_WIDTH) + 'px';
+					}
+				};
+			recalc();
+			if (!doc.addEventListener) {
+				return;
+			}
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body,
+		html {
+			height: 100%;
+			background: rgba(244, 245, 249, 0.5);
+		}
+
+		header {
+			font-size: 0.3rem;
+		}
+
+		.weather-luck-rule {
+			padding: 0.3rem;
+			background: rgba(244, 245, 249, 0.5);
+			min-height: 100%;
+			box-sizing: border-box;
+		}
+
+		.weather-luck-title {
+			margin-bottom: 0.2rem;
+			font-size: 0.34rem;
+			font-weight: bold;
+			color: #333;
+			text-align: center;
+		}
+
+		.weather-luck-rule-item {
+			font-size: 0.28rem;
+			font-weight: 500;
+			color: #333;
+			line-height: 0.42rem;
+			margin-bottom: 0.1rem;
+			text-indent: 1.5em;
+		}
+
+		.weather-luck-tip {
+			font-size: 0.2rem;
+			font-weight: 500;
+			color: #333;
+			line-height: 0.42rem;
+			margin-bottom: 0.1rem;
+			text-align: right;
+		}
+
+		.weather-luck-rule-footer-name {
+			font-size: 0.28rem;
+			font-weight: 500;
+			color: #333;
+			line-height: 0.42rem;
+			margin-bottom: 0.1rem;
+			text-align: right;
+		}
+
+		.weather-luck-rule-item span {
+			color: #687A9F;
+		}
+
+		.weather-luck-rule-item a {
+			color: #687A9F;
+			text-decoration: none;
+		}
+
+		.table {
+			font-size: 0.28rem;
+			border: 1px solid #ccc;
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		.table tr th,
+		.table tr td {
+			border: 1px solid #ccc;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="weather-luck-rule">
+		<div class="weather-luck-title">大字计算器隐私政策</div>
+		<div class="weather-luck-tip">
+			本版本发布日期：2024年04月04日<br>
+			生效日期：2024年04月04日
+		</div>
+		<p class="weather-luck-rule-item">
+			大字计算器由曲水章昇网络科技有限公司（以下简称“我们”）开发并运营的一款天气预测类APP软件。您在使用大字计算器服务时，我们将按照法律法规的规定，保护您的个人信息及隐私安全。因大字计算器的成功取决于建立与维护对用户的良好信誉，我们会坚定的实施隐私政策。
+			<strong>
+				如您未满18周岁，请您在监护人陪同下仔细阅读并充分理解本隐私政策，并征得监护人的同意后使用我们的服务或向我们提供信息。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			希望您在使用大字计算器服务前仔细阅读并理解本隐私政策，在阅读完本政策之后，如您对本《隐私政策》或与本《隐私政策》相关的事宜有任何问题，请联系邮箱： zhangshengtq@021.com。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				您使用或继续使用大字计算器，都表示您同意我们按照本《隐私政策》收集、使用、储存和分享您的信息。有关您个人信息权益的条款重要内容我们已用加粗形式提示，请特别关注。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				一、我们如何收集和使用信息
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">大字计算器提供的是天气信息类服务，您无需提供任何信息即可使用。但为了更好地向您提供我们产品的服务/功能，在您使用我们的服务/功能时，在您同意本隐私政策后，我们将基于业务功能、运营安全、网络安全等需要，收集您的如下信息：</p>
+		<p class="weather-luck-rule-item">
+			（一）业务功能
+		</p>
+		<p class="weather-luck-rule-item">
+			您在使用大字计算器产品时，我们会依据您所使用的产品功能，开启相应的权限，上述权限的开启为我们实现产品功能所需要的权限；若您拒绝提供，仅会影响相关功能的使用，不影响我们继续您提供服务。下表一概要性的介绍了大字计算器基于业务功能需要可能会调用您设备的一些权限，包括设备权限、对应的业务功能、调用权限的目的、何时询问以及是否可以关闭权限。提醒您注意，因使用Android系统版本或手机厂商的不同，权限显示方式以及关闭方式可能有所不同。
+		</p>
+		<div>
+			<table class="table" width=100%>
+				<tr>
+					<th width=10%>序号</th>
+					<th width=12%>设备权限</th>
+					<th width=12%>业务功能</th>
+					<th>目的</th>
+					<th>何时询问</th>
+					<th width=15%>是否可以关闭</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>位置权限</td>
+					<td>天气预测</td>
+					<td>依据您所在区域为您提供当日的天气信息温度、湿度、气压、风向风级等）以及预测未来15天的天气情况</td>
+					<td>首次启用时弹窗询问，如未获取可在点击具体天气场景功能时再次询问</td>
+					<td>是</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>设备权限</td>
+					<td>风控及使用环境安全</td>
+					<td>检测用户的使用环境是否安全，防止用户遇到盗用、欺诈等行为；以及保障网络安全和运营安全，杜绝恶意作弊的行为</td>
+					<td>首次启用时弹窗询问</td>
+					<td>是</td>
+				</tr>
+			</table>
+		</div>
+		<p class="weather-luck-rule-item">
+			具体我们产品涉及的功能所请求的设备权限详细情况如下：
+		</p>
+		<p class="weather-luck-rule-item">
+			业务功能一：天气预测
+		</p>
+		<p class="weather-luck-rule-item">
+			您在使用大字计算器的天气预测功能时，我们将<strong>收集您的位置信息，</strong>
+			以便依据您所在的区域提供当日的天气信息温度、湿度、气压、风向风级等）以及预测遇见15天的天气情况。如您未授权我们获取您的位置信息，我们需要您在使用时手动添加城市，以提供对应区域的天气信息。
+		</p>
+		<p class="weather-luck-rule-item">
+			业务功能二：接收消息通知、推送服务
+		</p>
+		<p class="weather-luck-rule-item">
+			如您授权我们获取通知权限后，我们将向您推送关于天气变化的情况，譬如当天天气情况，提醒您相关注意事项。您拒绝开启此权限不会影响你使用本软件的其他功能。
+		</p>
+		<p class="weather-luck-rule-item">
+			业务功能三：天气预报通知
+		</p>
+		<p class="weather-luck-rule-item">
+			您在使用幸福天气产品时，为及时通知您天气变化信息，确保常驻通知栏和桌面小组件能准确及时获取天气数据，我们需要自启动或关联启动应用，以确保及时获取天气信息。若您拒绝自启动或关联启动应用，你可以在手机设置中关闭通知或删除组件。您关闭通知或删除组件仅影响天气预报通知功能，不影响其他功能的使用。
+		</p>
+		<p class="weather-luck-rule-item">
+			业务功能四：保障系统安全及产品运营风险控制
+		</p>
+		<p class="weather-luck-rule-item">
+			为了提高您使用我们产品和/或服务时系统的安全性，更准确地预防钓鱼网站欺诈和保护使用环境，我们可能会通过了解您的设备品牌、设备型号、系统版本、屏幕分辨率、设备硬件序列号、唯一设备识别码(Android ID/IDFA/IDFV/MAC地址/SIM卡 IMSI信息/MEID/OAID/IMEI)、安装应用软件列表、IP地址信息来判断您的使用环境风险。
+		</p>
+		<p class="weather-luck-rule-item">
+			(二)设备信息和日志信息
+		</p>
+		<p class="weather-luck-rule-item">
+			1.基于以下原因，我们需要收集您的设备信息、日志信息：
+		</p>
+		<p class="weather-luck-rule-item">
+			（1）检测用户的使用环境是否安全，防止用户遇到盗用、欺诈等行为。
+		</p>
+		<p class="weather-luck-rule-item">
+			（2）保障网络安全和运营安全，杜绝恶意作弊的行为。
+		</p>
+		<p class="weather-luck-rule-item">
+			（3）为了帮助我们进行故障分析.
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				2.设备信息是指：是指您使用本软件时使用的设备的信息。我们会收集您的设备品牌、设备型号、屏幕分辨率、陀螺仪传感器、加速度传感器、重力传感器、线性加速度传感器、设备识别码（IMEI）、系统版本、应用识别码、IP地址、设备MAC地址、SIM卡信息（服务商信息，IMSI）、软件安装列表、硬件设备序列号、DEVICE_ID、Android_ID、IDFA、IDFV信息。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			3.日志信息内容包括：
+		</p>
+		<p class="weather-luck-rule-item">
+			（1）本软件的使用信息：您使用本软件的版本号、软件的总体运行情况、使用情况及频率。该类数据都是匿名的，我们不会对该等信息进行一一匹配、也不会与您的个人身份信息进行匹配。
+		</p>
+		<p class="weather-luck-rule-item">
+			（2）网络安全事件相关日志信息，例如网络崩溃、系统活动等信息。此类信息为法律规定要求收集的信息，如您不想此等信息被我们收集，则请您不要使用本软件。
+		</p>
+		<p class="weather-luck-rule-item">
+			4、为了预防恶意程序、确保运营质量及效率，我们需要收集您的应用列表信息，包括安装的应用信息或正在运行的进程信息、应用程序的总体运行、使用情况与频率、应用崩溃情况、总体安装使用情况、性能数据、应用来源情况，以更好地优化我们的移动软件在您的手机中的功能，从而为您提供更好的服务。
+		</p>
+		<p class="weather-luck-rule-item">
+			5、请您谅解，设备信息的收集是我们服务提供的前提和基础，只要您安装并打开本软件，我们将会收集您的设备信息。
+		</p>
+		<p class="weather-luck-rule-item">
+			6、单独的设备信息无法识别特定自然人身份，且该等信息我们均进行了去标识化、匿名化处理。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>7、为了准确识别您的身份信息，确保信息推送的准确性，大字计算器会在您设备静默或后台运行状态下收集您的MAC地址、DEVICE_ID、软件安装列表、设备序列号、SIM卡信息（服务商信息，IMSI）、WIFI扫描结果（SSID/BSSID）、IMEI和Android ID信息</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>8、当用户点击”联系我们“功能，在复制"联系我们"中的邮箱/QQ地址信息时，我们会获取设备粘贴板/剪贴板信息，以便用户能够准确的联系到我们。 </strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				二、依法豁免征得同意收集和使用的个人信息
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				请您理解，在下列情形中，根据法律法规及相关国家标准，我们收集和使用您的个人信息无需征得您的授权同意：
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			1.与个人信息控制者履行法律法规规定的义务相关的；
+		</p>
+		<p class="weather-luck-rule-item">
+			2.与国家安全、国防安全直接相关的；
+		</p>
+		<p class="weather-luck-rule-item">
+			3.与公共安全、公共卫生、重大公共利益直接相关的；
+		</p>
+		<p class="weather-luck-rule-item">
+			4.与刑事侦查、起诉、审判和判决执行等直接相关的；
+		</p>
+		<p class="weather-luck-rule-item">
+			5.出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的；
+		</p>
+		<p class="weather-luck-rule-item">
+			6.所涉及的个人信息是个人信息主体自行向社会公众公开的；
+		</p>
+		<p class="weather-luck-rule-item">
+			7.根据个人信息主体要求签订和履行合同所必需的；
+		</p>
+		<p class="weather-luck-rule-item">
+			8.从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道；
+		</p>
+		<p class="weather-luck-rule-item">
+			9.维护所提供产品或服务的安全稳定运行所必需的，如发现、处置产品或服务的故障；
+		</p>
+		<p class="weather-luck-rule-item">
+			10.个人信息控制者为新闻单位，且其开展合法的新闻报道所必需的；
+		</p>
+		<p class="weather-luck-rule-item">
+			11.个人信息控制者为学术研究机构，出于公共利益开展统计或学术研究所必要，且其对外提供学术研究或描述的结果时，对结果中所包含的个人信息进行去标识化处理的。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				三、对COOKIES 和同类技术的使用
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			（一）COOKIES和同类技术的简介
+		</p>
+		<p class="weather-luck-rule-item">
+			我们或我们的第三方合作伙伴可能通过COOKIES和WEB BEACON获取和使用您的信息，并将该等信息储存为日志信息。
+		</p>
+		<p class="weather-luck-rule-item">
+			COOKIES是指一种技术，当使用者访问设有COOKIES装置的本网站时，本网站之服务器会自动发送COOKIES至您浏览器内，并储存到您的移动设备内，此COOKIES便负责记录日后您到访本网站的种种活动、个人资料、浏览习惯、消费习惯甚至信用记录。
+			COOKIES技术能够使我们更好、更快地提供服务，并且能够使本平台能够更有针对性为您服务。
+		</p>
+		<p class="weather-luck-rule-item">
+			（二）COOKIES和同类技术的使用用途
+		</p>
+		<p class="weather-luck-rule-item">
+			我们使用自己的COOKIES和WEB BEACON，用于以下用途：
+		</p>
+		<p class="weather-luck-rule-item">
+			（1）记住您的身份；
+		</p>
+		<p class="weather-luck-rule-item">
+			（2）就我们服务情况进行分析、优化；
+		</p>
+		<p class="weather-luck-rule-item">
+			（3）广告优化。COOKIES和WEB BEACON有助于我们根据您的信息，优化您对广告的选择。
+		</p>
+		<p class="weather-luck-rule-item">
+			（三）COOKIES和WEB BEACON的授权使用
+		</p>
+		<p class="weather-luck-rule-item">
+			COOKIES和设备信息标识等同类技术是互联网中普遍使用的技术。当您使用大字计算器及相关服务时，我们可能会使用相关技术向您的设备发送一个或多个COOKIES或匿名标识符，以收集、标识您访问、使用本产品时的信息。我们承诺，不会将COOKIES用于本隐私政策所述目的之外的任何其他用途。我们使用
+			COOKIES和同类技术主要为了实现以下功能或服务：
+		</p>
+		<p class="weather-luck-rule-item">
+			3.1 保障产品与服务的安全、高效运转
+		</p>
+		<p class="weather-luck-rule-item">
+			我们可能会设置认证与保障安全性的COOKIES或匿名标识符，使我们确认您是否安全登录服务，或者是否遇到盗用、欺诈及其他不法行为。这些技术还会帮助我们改进服务效率，提升登录和响应速度。
+		</p>
+		<p class="weather-luck-rule-item">
+			3.2 数据分析及异常情况排查
+		</p>
+		<p class="weather-luck-rule-item">
+			a.我们可能会利用此类技术了解您的使用习惯，进行数据分析，以改善产品服务。
+		</p>
+		<p class="weather-luck-rule-item">
+			b.在使用大字计算器中，我们可能会使用COOKIES对浏览活动进行记录，用于排查崩溃、延迟的相关异常情况以及探索更好的服务方式。
+		</p>
+		<p class="weather-luck-rule-item">
+			3.3 COOKIES的清除
+		</p>
+		<p class="weather-luck-rule-item">
+			大多数浏览器均为用户提供了清除浏览器缓存数据的功能，您可以在浏览器设置功能中进行相应的数据清除操作。如您进行清除，您可能无法使用由我们提供的、依赖于COOKIES的服务或相应功能。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				四、我们可能分享、转让和披露的信息
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			（一）分享信息的前提条件
+		</p>
+		<p class="weather-luck-rule-item">
+			1.我们不会与其他任何公司、组织和个人共享您的个人信息，但以下情况除外：
+		</p>
+		<p class="weather-luck-rule-item">
+			1.1事先获得您明确的同意或授权；
+		</p>
+		<p class="weather-luck-rule-item">
+			1.2根据适用的法律法规、法律程序的要求、强制性的行政或司法要求所必须的情况下共享；
+		</p>
+		<p class="weather-luck-rule-item">
+			（二）为实现安全与分析统计的共享信息
+		</p>
+		<p class="weather-luck-rule-item">
+			保障使用安全：我们非常重视使用环境与服务安全，为保障您和其他用户的使用环境与财产安全，使您和我们的正当合法权益免受不法侵害，同时为了防止机器人对盗刷金币，我们或服务提供商可能会共享必要的设备、使用环境及日志信息。
+		</p>
+		<p class="weather-luck-rule-item">
+			分析产品使用情况：为分析我们服务的使用情况，提升用户使用的体验，可能会与关联方或第三方共享产品使用情况（崩溃、闪退）的统计性数据，这些数据难以与其他信息结合识别您的个人身份。
+		</p>
+		<p class="weather-luck-rule-item">
+			对我们与之共享个人信息的公司、组织和个人，我们会与其签署严格的保密协议，要求他们按照我们的说明、本隐私政策以及其他相关的保密及安全措施来处理个人信息。同时我们仅会向第三方提供推广的覆盖面和有效性的信息，而不会提供可以识别您身份的信息，或者我们将这些信息进行汇总匿名化处理，以便它不会识别您个人。
+		</p>
+		<p class="weather-luck-rule-item">
+			我们仅会出于正当、必要、特定的目的共享您的信息。
+		</p>
+		<p class="weather-luck-rule-item">
+			（三）收购、兼并、重组时个人信息的转让
+		</p>
+		<p class="weather-luck-rule-item">
+			随着我们业务的持续发展，我们有可能进行合并、收购、资产转让或类似的交易，而您的个人信息有可能作为此类交易的一部分而被转移。我们会要求新的持有您信息的公司、组织继续受本《隐私政策》的约束，否则,我们将要求该公司、组织重新向您征求授权同意。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				（四）基于其他原因的信息披露
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				我们还可能为以下原因需要保留、保存或披露您的个人信息：
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			1.您授权或同意大字计算器披露的；
+		</p>
+		<p class="weather-luck-rule-item">
+			2.遵守适用的法律法规；
+		</p>
+		<p class="weather-luck-rule-item">
+			3.遵守法院命令或其他法律程序的规定；
+		</p>
+		<p class="weather-luck-rule-item">
+			4.遵守相关政府机关的要求；
+		</p>
+		<p class="weather-luck-rule-item">
+			5.我们认为为遵守适用的法律法规、维护社会公共利益、或保护我们或我们的集团公司、我们的客户、其他用户或雇员的人身和财产安全或合法权益或公共安全及利益所合理必需的；及根据大字计算器各服务条款及声明中的相关规定，或者大字计算器认为必要的其他情形下。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				五、我们如何接入合作伙伴的SDK
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+		请您知悉，我们的某些服务将由我们和授权合作伙伴共同提供。我们会接入合作伙伴的SDK，出于合法、正当、必要、特定、明确的目的，他们会通过SDK接口收集到实现产品功能和服务所必须的您的个人信息，以实现产品功能。我们在这个 过程中不会收集您的任何信息。我们的合作伙伴无权将收集到的个人信息用于与产品或服务无关的其他用途。我们会向您展示接入合作伙伴SDK的目的；合作伙伴会通过SDK接口收集到实现产品功能和服务必须的您的个人信息；合作伙伴的类型或身份，具体情况请见<a href="http://rule.maishu888.com/share-info.html">《第三方合作伙伴及共享信息说明》</a>。我们会对接入的涉及个人信息收集的SDK进行安全监测，以保护您的个人信息安全。
+		</p>
+		<p class="weather-luck-rule-item">
+			其中，我们接入了委托我们进行推广和广告投放合作伙伴的SDK，他们会通过SDK收集不能识别您个人身份的间接画像标签及去标识化或匿名化后的信息，以帮助其在不识别您个人身份的前提下提升广告有效触达率。
+			<strong>
+			在您初次安装启动大字计算器产品时，我们会以弹窗的形式告知您上述广告推送行为，且后续如您拒绝该广告推送行为，可在“实用-设置-个性化推荐”页上选择关闭个性化广告推荐功能。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				六、我们如何存储、保护信息
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			（一）信息存储的地点
+		</p>
+		<p class="weather-luck-rule-item">
+			我们仅在本《隐私政策》所述目的所必需期间和法律法规要求的时限内保留您的信息。我们在中华人民共和国境内运营中收集和产生的信息，存储在中国境内。如需跨境传输，我们将会单独征得您的授权同意。
+		</p>
+		<p class="weather-luck-rule-item">
+			（二）信息存储的时间
+		</p>
+		<p class="weather-luck-rule-item">
+			一般而言，我们仅在为实现产品目的所必需的时间及法律规定范围内最短期限保留您的个人信息，内保留您的个人信息，最长不超过5年。当上述期限届满或我们的产品、服务发生停止运营的情形时，我们将以推送通知、公告等形式通知您，并在合理的期限内删除您的个人信息或进行匿名化处理。
+		</p>
+		<p class="weather-luck-rule-item">
+			（三）信息的保护方式
+		</p>
+		<p class="weather-luck-rule-item">
+			1.我们会使用不低于行业同行的加密技术、匿名化处理等合理可行的手段保护您的个人信息，并使用安全保护机制防止您的个人信息遭到恶意攻击。
+		</p>
+		<p class="weather-luck-rule-item">
+			2.我们会建立专门的安全部门、安全管理制度、数据安全流程保障您的个人信息安全。
+		</p>
+		<p class="weather-luck-rule-item">
+			3.我们采取严格的数据使用和访问制度，确保只有授权人员才可访问您的个人信息，并适时对数据和技术进行安全审计。
+		</p>
+		<p class="weather-luck-rule-item">
+			4.为应对个人信息泄露、损毁和丢失等可能出现的风险，我们建立了专门的应急响应团队，按照公司有关安全事件处置规范要求，针对不同安全事件启动安全预案，进行止损、分析、制定补救措施、联合相关部门进行溯源和打击。同时我们将按照法律法规的要求，及时向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。同时我们会及时将事件相关情况以邮件、信函、电话、推送通知等方式告知您，难以逐一告知个人信息主体时，我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况。
+		</p>
+		<p class="weather-luck-rule-item">
+			5.尽管已经采取了上述合理有效措施，并已经遵守了相关法律规定要求的标准，但请您理解，由于技术的限制以及可能存在的各种恶意手段，在互联网行业，即便竭尽所能加强安全措施，也不可能始终保证信息百分之百的安全，我们将尽力确保您提供给我们的个人信息的安全性。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				七、用户如何管理信息
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			（一）访问、更新和删除您的个人信息
+		</p>
+		<p class="weather-luck-rule-item">
+			如您需要访问、更新、删除和获取您在使用大字计算器过程中产生的个人信息，在合理的要求下，我们会在核实您的用户身份后及时向您提供，访问、更新、删除个人信息及获取个人信息副本。可通过发送邮件至zhangshengtq@021.com联系我们，我们会在15个工作日内回复您。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				（二）关闭或者撤回授权
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			您可以改变或者收回您授权我们收集和处理您的个人信息的范围：您可以改变您的智能移动设备的设置方式给予、修改或是收回您的授权同意，各家设备厂商的设置有所区别，但大多可在手机设置那进行，例如华为手机，您可以通过“设置”-“应用”-“应用管理”-“答题大富翁”-“权限”中给予、改变授权范围或撤回您的授权。
+		</p>
+		<p class="weather-luck-rule-item">
+			（三）投诉
+		</p>
+		<p class="weather-luck-rule-item">
+			您可按照我们公司的联系方式进行投诉或举报。如果您认为您的个人信息权利可能受到侵害，或者发现侵害个人信息权利的线索，您可以通过《隐私政策》下方的联系方式联系我们，我们核查后会在十五个工作日内反馈您的投诉与举报。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				八、年龄限制
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				1.本软件服务主要面向成人。我们的产品、网站和服务主要面向成人。若您是 14周岁以下的未成年人，在使用我们的产品和/或服务前，您应在监护人的陪同下阅读本隐私政策及<a
+					href="http://rule.mairui888.com/shunxin/childinfo.html">《大字计算器儿童个人信息保护协议》</a>，并应确保已征得您的监护人同意后使用我们的服务并向我们提供您的信息。
+				我们会根据国家相关法律法规的规定着重保护未成年人的个人信息。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				2. 如您的监护人不同意您按照本隐私政策及《大字计算器儿童个人信息保护协议》使用我们的服务或向我们提供信息，请您立即终止使用我们的服务并及时通知我们。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				3.对于经父母或法定监护人同意而收集未成年人个人信息的情况，我们只会在受到法律允许、父母或监护人明确同意或者保护未成年人所必要的情况下使用或公开披露此信息。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				4.
+				若您是未成年人的监护人，当您对您所监护的未成年人使用我们的服务或其向我们提供的用户信息有任何疑问时，请您及时与我们联系。我们将根据国家相关法律法规及本隐私政策及《大字计算器儿童个人信息保护协议》的规定保护未成年人用户信息的保密性及安全性。如果我们发现自己在未事先获得可证实的父母或法定监护人同意的情况下收集了未成年人的个人信息，则会设法尽快删除相关数据。
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				九、通知和修订
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				1.我们可能根据国家法律法规要求及经营发展需要修改隐私协议，一般而言，我们会在“设置-关于我们”页面发布变更后的隐私政策，
+			</strong>
+			会将上述查看路径上标记小红点，提醒您查看更新后的协议。
+		</p>
+		<p class="weather-luck-rule-item">
+			2.对于重大变更，我们会提供更为显著的通知（包括我们会通过站内方式进行通知甚至向您提供弹窗提示）。本政策所指的重大变更包括但不限于：我们的服务模式发生重大变化，如处理个人信息的目的、处理的个人信息类型、个人信息的使用方式等；我们在控制权等方面发生重大变化，如并购重组等引起的所有者变更等；个人信息共享、转让或公开披露的主要对象发生变化；您参与个人信息处理方面的权利及行使方式发生重大变化；我们负责处理个人信息安全的责任部门、联系方式及投诉渠道发生变化时；个人信息安全影响评估报告表明存在高风险时。
+		</p>
+		<p class="weather-luck-rule-item">
+			3.如您确认接受变更后的内容，则可正常使用本软件的相关服务；如您不同意变更后的内容，请您不要点击确认或继续使用本软件。
+		</p>
+		<p class="weather-luck-rule-item">
+			<strong>
+				十、如何联系我们
+			</strong>
+		</p>
+		<p class="weather-luck-rule-item">
+			如果您对本隐私政策有任何疑问、意见或建议，通过以下方式与我们联系：
+		</p>
+		<p class="weather-luck-rule-item">
+			公司名称：曲水章昇网络科技有限公司
+		</p>
+		<p class="weather-luck-rule-item">
+			公司注册地址：西藏自治区拉萨市曲水县雅江工业园区贝珠雅办公楼302号
+		</p>
+		<p class="weather-luck-rule-item">
+			个人信息保护/信息安全部门联系方式： zhangshengtq@021.com，我们将在十五个工作日内回复。
+		</p>
+		<p class="weather-luck-rule-footer-name">曲水章昇网络科技有限公司</p>
+		<p class="weather-luck-rule-item" style="margin-top: 30px;"><a style="color: #0000cc;"
+				href="http://rule.maishu888.com/share-info.html">附录：第三方合作伙伴及共享信息</a></p>
+	</div>
+</body>
+<script>
+	var UA = window.navigator.userAgent.toLowerCase();
+	var isIOS = /iphone|ipad|ipod/.test(UA);
+	var isAN = UA.indexOf('android') >= 0;
+	var setBtn = document.getElementById("set-operation");
+	setBtn.onclick = function () {
+		if (isAN) {
+			window.xyWeather.callApp(JSON.stringify({ action: "goSetting" }))
+			return
+		}
+		if (isIOS) {
+			window.webkit.messageHandlers.callApp.postMessage(JSON.stringify({ action: "goSetting" }))
+		}
+
+	}
+</script>
+
+</html>
